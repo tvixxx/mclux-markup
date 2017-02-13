@@ -1,0 +1,24 @@
+// font rule here
+@font-face {
+    font-family: 'open_sanscondensed_light';
+    src: url('font/opensans/opensans-condlight.eot');
+    src: url('font/opensans/opensans-condlight.eot?#iefix') format('embedded-opentype'),
+    url('font/opensans/opensans-condlight.woff2') format('woff2'),
+    url('font/opensans/opensans-condlight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'open_sansCnLtIt';
+    src: url('font/opensans/opensans-condlightitalic.eot');
+    src: url('opensans-condlightitalic.eot?#iefix') format('embedded-opentype'),
+    url('font/opensans/opensans-condlightitalic.woff2') format('woff2'),
+    url('font/opensans/opensans-condlightitalic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// fonts variables
+$font-primary: 'open_sanscondensed_light', 'Arial', sans-serif;
+$font-secondary: 'open_sansCnLtIt', 'Arial', sans-serif;

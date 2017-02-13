@@ -1,0 +1,242 @@
+$link-font-size: 23px;
+
+.main-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    display: block;
+    width: 860px;
+    min-height: 66px;
+    padding-top: 8px;
+    margin: 0 auto;
+    padding-left: 70px;
+    padding-right: 23px;
+    font-size: 0;
+    background-color: #fff;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 35px;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .19);
+    z-index: 999;
+    transition: none;
+
+    @include mq($until: xl) {
+        width: 790px;
+        padding-left: 50px;
+    }
+
+    @include mq($until: l) {
+        max-width: 790px;
+        width: 95%;
+        padding-left: 30px;
+        min-height: 60px;
+    }
+
+    @include mq($until: m) {
+        position: fixed;
+        top: 0;
+        right: auto;
+        width: 200px;
+        height: 100%;
+        padding: 20px 10px 20px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        will-change: transform;
+        transform: translateX(-100%);
+        z-index: 1;
+        transition: all .3s ease;
+    }
+
+    &.active {
+        transform: translateX(0);
+        z-index: 100;
+    }
+
+    &__menu {
+        position: absolute;
+        display: none;
+        vertical-align: top;
+        z-index: -2;
+
+        @include mq($until: m) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 20px;
+            padding-left: 13px;
+            display: inline-block;
+            width: 20px;
+            height: 15px;
+            margin-bottom: 20px;
+            z-index: 999;
+        }
+    }
+
+    &__nav-icon {
+        width: 20px;
+        height: 18px;
+        position: relative;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        cursor: pointer;
+
+        &:hover > span {
+            transform: scale(1.2);
+            background-color: lighten($color-bg-main-theme-1, 5%);
+        }
+
+        .non-animation &:hover > span {
+            transform: none;
+            background-color: $color-bg-main-theme-1;
+        }
+    }
+
+    &__nav-icon span {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background-color: $color-bg-main-theme-1;
+        border-radius: 2px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease;
+    }
+
+    &__nav-icon span:nth-child(1) {
+        top: 0;
+        transform-origin: left center;
+    }
+
+    &__nav-icon span:nth-child(2) {
+        top: 7px;
+        transform-origin: left center;
+    }
+
+    &__nav-icon span:nth-child(3) {
+        top: 14px;
+        transform-origin: left center;
+    }
+
+    &__nav-icon.open span:nth-child(1) {
+        transform: rotate(45deg);
+        top: -3px;
+        left: 0;
+    }
+
+    &__nav-icon.open span:nth-child(2) {
+        width: 0;
+        opacity: 0;
+    }
+
+    &__nav-icon.open span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 11px;
+        left: 0;
+    }
+
+    &__logo-preview {
+        display: inline-block;
+        vertical-align: middle;
+
+        @include mq($until: l) {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: inline-block;
+        font-size: 0;
+        vertical-align: middle;
+        margin-left: 65px;
+
+        @include mq($until: m) {
+            display: block;
+            margin-left: 0;
+            padding-top: 30px;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        list-style: none;
+
+        &:focus {
+            outline: 0;
+        }
+
+        @include mq($until: m) {
+            display: block;
+        }
+
+        & + & {
+            margin-left: 30px;
+
+            @include mq($until: m) {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &__link {
+        position: relative;
+        font-size: $link-font-size;
+        line-height: 1;
+        color: $color-text-primary;
+        outline: 0;
+        border: 0;
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            display: block;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $color-border-main-theme-1;
+            transform: scale(.7);
+            transition: all .2s ease;
+            opacity: 0;
+            will-change: transform;
+            visibility: hidden;
+        }
+
+        &:hover:before {
+            opacity: .6;
+            width: 100%;
+            transform: scale(1);
+            visibility: visible;
+        }
+
+        &.active {
+
+            &:before {
+                opacity: 1;
+                width: 100%;
+                transform: scale(1);
+                visibility: visible;
+            }
+        }
+    }
+
+    &__get-request {
+        display: inline-block;
+        font-size: 0;
+        vertical-align: middle;
+        margin-left: 22px;
+
+        @include mq($until: m) {
+            display: block;
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+}

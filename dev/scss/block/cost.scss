@@ -1,0 +1,213 @@
+.cost {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 516px;
+    padding-right: 66px;
+    vertical-align: top;
+    z-index: 5;
+
+    @include mq($until: xl) {
+        width: 375px;
+        max-width: none;
+        padding-right: 0;
+    }
+
+    @include mq($until: l) {
+        width: 50%;
+    }
+
+    @include mq($until: sm) {
+        display: block;
+        width: 100%;
+    }
+
+    &__wrapper {
+
+    }
+
+    &__inner-container {
+
+        @include mq($until: sm){
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    &__heading-section {
+        position: relative;
+        display: block;
+        font-size: 30px;
+        line-height: 1;
+        padding-top: 27px;
+        margin-bottom: 30px;
+        list-style: none;
+        color: $color-text-primary;
+        z-index: 3;
+        text-align: right;
+
+        @include mq($until: xl) {
+            font-size: 28px;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            bottom: -7px;
+            right: 0;
+            width: 679px;
+            height: 3px;
+            background-color: $color-default--white;
+
+            @include mq($until: xl) {
+                width: 540px;
+            }
+
+            @include mq($until: l) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__list {
+        display: block;
+        font-size: 0;
+        text-align: right;
+        margin-bottom: 35px;
+
+        @include mq($until: xl) {
+            margin-bottom: 30px;
+        }
+
+        @include mq($until: l) {
+            margin-bottom: 10px;
+        }
+
+        @include mq($until: l) {
+            text-align: center;
+        }
+
+        @include mq($until: m) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: inline-block;
+        color: $color-text-primary;
+        vertical-align: top;
+
+        @include mq($until: l) {
+            padding-bottom: 10px;
+        }
+
+        @include mq($until: m) {
+            width: 37%;
+            padding-bottom: 15px;
+        }
+
+        @include mq($until: sm) {
+            width: 100%;
+            max-width: 80px;
+        }
+
+        & + & {
+            margin-left: 30px;
+        }
+
+        @include mq($until: l) {
+            margin-left: 20px;
+        }
+    }
+
+    &__circle-item {
+        position: relative;
+        width: 68px;
+        height: 68px;
+        margin-bottom: 5px;
+        border-radius: 50%;
+        text-align: center;
+        transform-origin: center center;
+        transform: rotate(180deg);
+        font-size: 0;
+        z-index: 1;
+
+        &--with-fake-bg {
+
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: -3px;
+            left: -2px;
+            width: 73px;
+            height: 74px;
+            background-size: 100% 100%;
+            background-position: 101% 109%;
+            background-repeat: no-repeat;
+            background-image: url('../../img/blocks/Ellipse-fake.png');
+            transform: rotate(180deg) scale(.95);
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            top: -3px;
+            left: -4px;
+            width: 68px;
+            height: 68px;
+            background-size: 100% 100%;
+            background-position: 101% 109%;
+            background-repeat: no-repeat;
+            background-image: url('../../img/blocks/Ellipse-fake-shadow.png');
+            transform: rotate(180deg);
+        }
+
+        @include mq($until: m) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        & > canvas {
+            z-index: 2;
+            position: relative;
+        }
+    }
+
+    &__weight {
+        position: absolute;
+        top: 0;
+        right: 50%;
+        font-family: $font-primary;
+        text-transform: none;
+        font-size: 31px;
+        font-weight: bold;
+        line-height: 64px;
+        transform: rotate(-180deg) translateX(-50%);
+        z-index: 2;
+    }
+
+    &__price-weight {
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 2px 5px 3px;
+        font-family: $font-secondary;
+        font-size: 17px;
+        line-height: 1;
+        background-color: #d7d7d7;
+        vertical-align: top;
+    }
+
+    &__form-request-cost {
+        display: block;
+        width: 230px;
+        margin-left: auto;
+        margin-right: 0;
+
+        @include mq($until: l) {
+            margin-right: auto;
+        }
+    }
+}

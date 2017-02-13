@@ -1,0 +1,89 @@
+.request-cost {
+    color: $color-text-primary;
+
+    &__title {
+        display: block;
+        font-family: $font-primary;
+        font-size: 37px;
+        line-height: 1.1;
+        text-align: right;
+
+        @include mq($until: xl) {
+            font-size: 35px;
+            line-height: 1;
+        }
+    }
+
+    &__pre-title {
+        display: block;
+        font-size: 24px;
+        line-height: 1.2;
+        text-align: right;
+        margin-bottom: 8px;
+
+        @include mq($until: xl) {
+            font-size: 23px;
+            line-height: 1;
+        }
+    }
+
+    &__form {
+        box-sizing: border-box;
+        display: block;
+
+        @include mq($until: m) {
+            padding-bottom: 30px;
+        }
+    }
+
+    &__text-field {
+        box-sizing: border-box;
+        display: block;
+        width: 227px;
+        height: 80px;
+        padding: 10px;
+        margin-left: auto;
+        margin-bottom: 5px;
+        resize: none;
+        font-size: 18px;
+        line-height: 1;
+        color: #292929;
+        text-align: right;
+        border: 1px solid #d7d7d7;
+        outline: none;
+
+        @include mq($until: xl) {
+            height: 68px;
+            margin-bottom: 3px;
+        }
+    }
+
+    &__phone-field {
+        box-sizing: border-box;
+        display: block;
+        padding: 10px;
+        width: 227px;
+        height: 36px;
+        font-size: 18px;
+        margin-left: auto;
+        margin-bottom: 8px;
+        border: 1px solid #d7d7d7;
+        text-align: right;
+        outline: none;
+
+        @include mq($until: xl) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &__get-request {
+        display: block;
+        width: 227px;
+        margin-left: auto;
+    }
+
+    ::-webkit-input-placeholder {color:#292929; opacity: .54;}
+    ::-moz-placeholder          {color:#292929; opacity: .54;}/* Firefox 19+ */
+    :-moz-placeholder           {color:#292929; opacity: .54;}/* Firefox 18- */
+    :-ms-input-placeholder      {color:#292929; opacity: .54;}
+}

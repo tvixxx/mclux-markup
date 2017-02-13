@@ -1,0 +1,12 @@
+.page {
+    display: block;
+
+    &__header {
+        display: block;
+    }
+
+    &__section {
+        position: relative;
+        //background-color: $color-default--white
+    }
+}

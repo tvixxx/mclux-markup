@@ -1,0 +1,187 @@
+.characters {
+    position: relative;
+    display: inline-block;
+    width: 443px;
+    margin-right: 8px;
+    padding: 0 87px 0 80px;
+    vertical-align: top;
+    z-index: 2;
+
+    @include mq($until: xl) {
+        width: 365px;
+        margin-right: 8px;
+        padding: 0 92px 0 82px;
+    }
+
+    @include mq($until: l) {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 49%;
+        padding: 0;
+        margin-right: 0;
+    }
+
+    @include mq($until: sm) {
+        display: block;
+        width: 100%;
+    }
+
+    &__wrapper {
+        transform: skew(19deg);
+        background-color: $color-default--white;
+
+        @include mq($until: l) {
+            transform: skew(0deg);
+        }
+    }
+
+    &__inner-container {
+        position: relative;
+        display: block;
+        transform: skew(-19deg);
+
+        @include mq($until: l) {
+            transform: skew(0deg);
+            box-shadow: 3px 0 6px 0 rgba(44, 44, 44, .2)
+        }
+
+        @include mq($until: sm){
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: -84px;
+            background: #fff;
+            width: 380px;
+            height: 100%;
+
+            @include mq($until: xl) {
+                width: 220px;
+            }
+
+            @include mq($until: l) {
+                width: 100%;
+            }
+
+        }
+    }
+
+    &__heading-section {
+        position: relative;
+        display: block;
+        font-size: 30px;
+        line-height: 1;
+        padding-top: 27px;
+        margin-bottom: 30px;
+        list-style: none;
+        color: $color-text-primary;
+        z-index: 2;
+
+        @include mq($until: xl) {
+            font-size: 28px;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            bottom: -7px;
+            width: 380px;
+            height: 3px;
+            background-color: $color-bg-main-theme-1;
+
+            @include mq($until: xl) {
+                width: 298px;
+            }
+
+            @include mq($until: l){
+                width: 100%;
+            }
+        }
+    }
+
+    &__list {
+        box-sizing: border-box;
+        display: block;
+        font-size: 0;
+        padding-left: 10px;
+        padding-bottom: 15px;
+    }
+
+    &__item {
+        box-sizing: border-box;
+        position: relative;
+
+        @include mq($until: m) {
+            padding-bottom: 10px;
+
+            &:last-of-type {
+                padding-bottom: 20px;
+            }
+        }
+
+        & + & {
+            margin-top: 22px;
+        }
+    }
+
+    &__item:last-of-type > &__about {
+        padding-top: 5px;
+    }
+
+    &__image-preview {
+        display: inline-block;
+
+        @include mq($until: l) {
+            width: 37%;
+        }
+
+        @include mq($until: sm) {
+            display: inline-block;
+            width: auto;
+        }
+
+        @include mq($until: xs) {
+            width: 31%;
+        }
+    }
+
+    &__image {
+        max-width: 100%;
+    }
+
+    &__about {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 20px;
+    }
+
+    &__title {
+        font-family: $font-primary;
+        font-size: 22px;
+        line-height: 1;
+        margin-bottom: 5px;
+
+        @include mq($until: xs) {
+            font-size: 20px;
+        }
+
+    }
+
+    &__description {
+        display: block;
+        width: 165px;
+        font-family: $font-primary;
+        font-size: 17px;
+        line-height: 1.4;
+
+        @include mq($until: m) {
+            max-width: 165px;
+            width: 100%;
+            font-size: 17px;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "mclux",
+  "private": true,
+  "version": "0.0.0",
+  "authors": [
+    "HTC-CS"
+  ],
+  "dependencies": {
+    "onscreen": "https://unpkg.com/onscreen/dist/on-screen.umd.min.js"
+  },
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap-sass": "*"
+  }
+}

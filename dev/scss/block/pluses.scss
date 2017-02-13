@@ -1,0 +1,251 @@
+.pluses {
+    position: relative;
+    display: inline-block;
+    width: 443px;
+    margin-right: 8px;
+    padding: 0 87px 0 80px;
+    vertical-align: top;
+    z-index: 2;
+
+    @include mq($until: xl) {
+        width: 355px;
+        margin-right: 8px;
+        padding: 0 92px 0 82px;
+    }
+
+    @include mq($until: l) {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 49%;
+        padding: 0;
+        margin-right: 0;
+    }
+
+    @include mq($until: sm) {
+        display: block;
+        width: 100%;
+    }
+
+    &__wrapper {
+        transform: skew(19deg);
+        background-color: $color-default--white;
+
+        @include mq($until: l) {
+            transform: skew(0deg);
+        }
+    }
+
+    &__inner-container  {
+        position: relative;
+        display: block;
+        transform: skew(-19deg);
+
+        @include mq($until: l) {
+            transform: skew(0deg);
+            box-shadow: 3px 0 6px 0 rgba(44, 44, 44, .2)
+        }
+
+        @include mq($until: sm){
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: -84px;
+            background: #fff;
+            width: 380px;
+            height: 100%;
+
+            @include mq($until: xl) {
+                width: 220px;
+            }
+
+            @include mq($until: l) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__heading-section {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        font-size: 30px;
+        line-height: 1;
+        padding-top: 27px;
+        margin-bottom: 30px;
+        list-style: none;
+        color: $color-text-primary;
+        z-index: 2;
+
+        @include mq($until: xl) {
+            font-size: 28px;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            bottom: -7px;
+            width: 380px;
+            height: 3px;
+            background-color: $color-bg-main-theme-1;
+
+            @include mq($until: xl) {
+                width: 298px;
+            }
+
+            @include mq($until: l){
+                width: 100%;
+            }
+
+            @include mq($until: m) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__list {
+        box-sizing: border-box;
+        display: block;
+        font-size: 0;
+        padding-left: 10px;
+        padding-bottom: 30px;
+
+        @include mq($until: xl) {
+            padding-bottom: 15px;
+        }
+
+        @include mq($until: l) {
+            padding-bottom: 50px;
+        }
+
+        @include mq($until: m) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    &__item {
+        box-sizing: border-box;
+        position: relative;
+        padding-left: 45px;
+
+        @include mq($until: xl) {
+            padding-left: 40px;
+        }
+
+        @include mq($until: sm) {
+            display: inline-block;
+            width: 50%;
+            vertical-align: top;
+            padding-bottom: 40px;
+
+            &:nth-of-type(n+2) {
+                padding-right: 10px;
+            }
+        }
+
+        @include mq($until: xs) {
+            display: block;
+            width: 100%;
+        }
+
+        & + & {
+            margin-top: 22px;
+
+            @include mq($until: sm) {
+                margin-top: 0;
+            }
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-image: url('../../img/icons/sprite.png');
+        }
+
+        &--bag {
+
+            &:before {
+                background-size: 110%;
+                background-position: 0 0;
+            }
+        }
+
+        &--car-deliver {
+
+            &:before {
+                left: -3px;
+                background-position: 0 -40px;
+            }
+        }
+
+        &--money {
+
+            &:before {
+                background-size: auto;
+                background-position: 0 -105px;
+            }
+        }
+
+        &--time {
+
+            &:before {
+                background-size: auto;
+                background-position: 0 -160px;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 23px;
+        line-height: 1;
+        margin-bottom: 5px;
+        font-family: $font-primary;
+
+        @include mq($until: xl) {
+            font-size: 21px;
+        }
+    }
+
+    &__description {
+        position: relative;
+        display: block;
+        width: 300px;
+        font-size: 18px;
+        line-height: 1.4;
+        padding-left: 8px;
+        font-family: $font-secondary;
+
+        @include mq($until: xl) {
+            width: 215px;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        @include mq($until: m) {
+            width: 100%;
+            max-width: 210px;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 4px;
+            left: 0;
+            width: 2px;
+            height: 90%;
+            background-color: #343434;
+            opacity: .18;
+        }
+    }
+}
