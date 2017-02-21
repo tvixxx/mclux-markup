@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html class="js-root">
+<head lang="ru">
+    <meta charset="UTF-8">
+    <title>МК Люкс - грузоперевозки по всей России</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/fav.png">
+    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
+</head>
+<body class="body">
+<div class="page">
+    <h1 class="page__main-title visuallyhidden">МК Люкс</h1>
+    <div class="page__header header">
+        <div class="container header__container">
+            <div class="main-navigation__menu">
+                <div id="nav-icon" class="main-navigation__nav-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <nav class="main-navigation js-navigation-list">
+                <h2 class="visuallyhidden">Меню навигации</h2>
+                <div class="main-navigation__logo-preview">
+                    <img src="img/blocks/logo-preview.jpg" alt="Логотип" class="main-navigation__preview-img">
+                </div>
+                <ul class="main-navigation__list js-main-navigation-list">
+                    <li class="main-navigation__item">
+                        <a href="#price" title="Стоимость" class="main-navigation__link active js-anchor-link" data-hash="#price">
+                            Стоимость
+                        </a>
+                    </li>
+                    <li class="main-navigation__item">
+                        <a href="#characters" title="Характеристики" class="main-navigation__link js-anchor-link" data-hash="#characters">
+                            Характеристики
+                        </a>
+                    </li>
+                    <li class="main-navigation__item">
+                        <a href="#stages" title="Этапы" class="main-navigation__link js-anchor-link" data-hash="#stages">
+                            Этапы
+                        </a>
+                    </li>
+                    <li class="main-navigation__item">
+                        <a href="#contacts" title="Контакты" class="main-navigation__link js-anchor-link" data-hash="#contacts">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+                <div class="main-navigation__get-request">
+                    <a href="#contacts" data-hash="#contacts" class="btn btn--get-request js-anchor-link">Оставить заявку</a>
+                </div>
+            </nav>
+            <div class="inner-container header__inner-container">
+                <div class="header__greeting">
+                    <h2 class="header__title">
+                        Первоклассные грузоперевозки по всей России
+                    </h2>
+                    <p class="header__about-clients-text">
+                        Максимум внимания каждому клиенту
+                    </p>
+                </div>
+
+                <div class="header__get-request">
+                    <a href="#price" data-hash="#price" class="btn btn--get-request btn--xl js-anchor-link">Оставить заявку</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="page__section">
+        <div class="container container--overflow container--shadow-pluses">
+            <div class="pluses">
+                <div class="pluses__wrapper">
+                    <div class="pluses__inner-container">
+                        <h2 class="pluses__heading-section">Наши преимущества</h2>
+                        <ul class="pluses__list">
+                            <li class="pluses__item pluses__item--bag">
+                                <h3 class="pluses__title">
+                                    Компитентность
+                                </h3>
+                                <p class="pluses__description">
+                                    Быстрая&nbsp;и&nbsp;честкая работа&nbsp;менеджеров,
+                                    вежливые&nbsp;и&nbsp;опытные водители
+                                </p>
+                            </li>
+                            <li class="pluses__item pluses__item--car-deliver">
+                                <h3 class="pluses__title">
+                                    Свой автопарк
+                                </h3>
+                                <p class="pluses__description">
+                                    Имеется свой&nbsp;автопарк,
+                                    состоящий&nbsp;из&nbsp;современного транспорта
+                                </p>
+                            </li>
+                            <li class="pluses__item pluses__item--time">
+                                <h3 class="pluses__title">
+                                    Качественно и&nbsp;в&nbsp;срок
+                                </h3>
+                                <p class="pluses__description">
+                                    Гарантия доставки груза
+                                    в&nbsp;целостности и&nbsp;сохранности
+                                </p>
+                            </li>
+                            <li class="pluses__item pluses__item--money">
+                                <h3 class="pluses__title">
+                                    Экономичность
+                                </h3>
+                                <p class="pluses__description">
+                                    Расчитаем&nbsp;стоимость
+                                    <br>
+                                    для&nbsp;каждого&nbsp;клиента,
+                                    действуют&nbsp;индивидуальные
+                                    скидки&nbsp;для&nbsp;постоянных&nbsp;клиентов
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="cost js-hash-section js-hash-elem" data-hash="#price">
+                <div class="cost__wrapper">
+                    <div class="cost__inner-container">
+                        <h2 class="cost__heading-section">Стоимость</h2>
+                        <ul class="cost__list js-cost-list js-scroll-to-list-costs">
+                            <li class="cost__item js-cost-chart-item">
+                                <div class="cost__circle-item cost__circle-item--with-fake-bg js-chart-item" data-percent="15" data-bar-color="#e54a21" >
+                                    <span class="cost__weight js-chart-content">1,5т</span>
+                                </div>
+                                <p class="cost__price-weight">от 15р/км</p>
+                            </li>
+                            <li class="cost__item js-cost-chart-item">
+                                <div class="cost__circle-item cost__circle-item--with-fake-bg js-chart-item" data-percent="25" data-bar-color="#e54a21" >
+                                    <span class="cost__weight js-chart-content">5т</span>
+                                </div>
+                                <p class="cost__price-weight">от 25р/км</p>
+                            </li>
+                            <li class="cost__item js-cost-chart-item">
+                                <div class="cost__circle-item cost__circle-item--with-fake-bg js-chart-item" data-percent="50" data-bar-color="#e54a21" >
+                                    <span class="cost__weight js-chart-content">10т</span>
+                                </div>
+                                <p class="cost__price-weight">от 30р/км</p>
+                            </li>
+                            <li class="cost__item js-cost-chart-item">
+                                <div class="cost__circle-item cost__circle-item--with-fake-bg js-chart-item" data-percent="100" data-bar-color="#e54a21">
+                                    <span class="cost__weight js-chart-content">20т</span>
+                                </div>
+                                <p class="cost__price-weight">от 45р/км</p>
+                            </li>
+                        </ul>
+                        <div class="cost__form-request-cost request-cost">
+                            <h3 class="request-cost__title">
+                                Оставьте заявку
+                            </h3>
+                            <p class="request-cost__pre-title">
+                                на рассчет стоимости груза
+                            </p>
+                            <form class="request-cost__form" action="">
+                                <textarea class="request-cost__text-field js-textarea-form" maxlength="400" name="request" placeholder="Опишите Ваш груз:" required></textarea>
+                                <input class="request-cost__phone-field js-input-phone-field" type="text" name="phone_number" maxlength="11" value="" placeholder="Ваш телефон:" required>
+                                <div class="request-cost__get-request">
+                                    <button class="btn btn--get-price" type="submit" value="Оставить заявку">Рассчитать стоимость</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="page__section js-hash-section js-hash-elem" data-hash="#stages">
+        <div class="container container--no-paddings">
+            <div class="deliver">
+                <div class="deliver__inner-container inner-container inner-container--without-right">
+                    <h2 class="deliver__heading-section">
+                        До отправки груза осталось 3 шага
+                    </h2>
+                    <ul class="deliver__list">
+                        <li class="deliver__item" data-number="1">
+                            <p class="deliver__description">
+                                Оставляете заявку&nbsp;на&nbsp;сайте
+                                или&nbsp;по&nbsp;телефону <span class="deliver-marker deliver-marker--br">8 (3412) 47-39-38</span>
+                            </p>
+                        </li>
+                        <li class="deliver__item" data-number="2">
+                            <p class="deliver__description">
+                                <span class="deliver-marker">В&nbsp;течении получаса</span> наши специалисты
+                                ее&nbsp;обрабатывают&nbsp;и&nbsp;уточняют
+                                по&nbsp;телефону&nbsp;все&nbsp;детали
+                            </p>
+                        </li>
+                        <li class="deliver__item" data-number="3">
+                            <p class="deliver__description">
+                                Оформление заявки<br class="deliver__br">
+                                <span class="deliver-marker">и отправка груза</span>
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="deliver__map-wrapper">
+                        <img class="deliver__preview-map" src="img/blocks/russia-map.png" alt="Карта россии">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section">
+            <h2 class="visuallyhidden">Количество автомобилей</h2>
+            <div class="container container--no-paddings">
+                <div class="panel-module panel-module--dark">
+                    <div class="panel-module__inner-container inner-container">
+                        <div class="panel-module__square-module">
+                            <span class="panel-module__count-cars">23</span>
+                        </div>
+                        <p class="panel-module__description">
+                            машины в собственности, а так же есть наемный транспорт
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="page-section">
+        <div class="container container--overflow container--shadow--characters">
+            <div class="characters js-hash-section js-hash-elem" data-hash="#characters">
+                <div class="characters__wrapper">
+                    <div class="characters__inner-container">
+                        <h2 class="characters__heading-section">Характеристики транспорта</h2>
+                        <ul class="characters__list">
+                            <li class="characters__item characters__item--bag">
+                                <div class="characters__image-preview">
+                                    <img src="img/blocks/gazel.jpg" alt="Фото газели" class="characters__image">
+                                </div>
+                                <div class="characters__about">
+                                    <h3 class="characters__title">
+                                        Газель :
+                                    </h3>
+                                    <p class="characters__description">
+                                        габариты 4х1,9х1,9 м<br>
+                                        грузоподъемность 1,5т
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="characters__item characters__item--car-deliver">
+                                <div class="characters__image-preview">
+                                    <img src="img/blocks/hendai.jpg" alt="Фото хендай" class="characters__image">
+                                </div>
+                                <div class="characters__about">
+                                    <h3 class="characters__title">
+                                        Хендай :
+                                    </h3>
+                                    <p class="characters__description">
+                                        габариты 5х2,2х2 м<br>
+                                        грузоподъемность 5т
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="characters__item characters__item--time">
+                                <div class="characters__image-preview">
+                                    <img src="img/blocks/maz.jpg" alt="Фото маз(тент)" class="characters__image">
+                                </div>
+                                <div class="characters__about">
+                                    <h3 class="characters__title">
+                                        МАЗ (тент) :
+                                    </h3>
+                                    <p class="characters__description">
+                                        габариты 6,2х2,4х2,6<br>
+                                        грузоподъемность 10т
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="characters__item characters__item--money">
+                                <div class="characters__image-preview">
+                                    <img src="img/blocks/daf.jpg" alt="фото daf" class="characters__image">
+                                </div>
+                                <div class="characters__about">
+                                    <h3 class="characters__title">
+                                        DAF :
+                                    </h3>
+                                    <p class="characters__description">
+                                        габариты 13,6х2,4х2,6<br>
+                                        грузоподъемность 20т
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="contacts js-hash-section js-hash-elem" data-hash="#contacts">
+                <div class="contacts__wrapper">
+                    <div class="contacts__inner-container">
+                        <h2 class="contacts__heading-section">Контакты</h2>
+                        <ul class="contacts__list">
+                            <li class="contacts__item contacts__item--address">
+                                <p class="contacts__title-text">Адрес:</p>
+                                <p class="contacts__text">Ижевск, ул. Пушкинская, 268</p>
+                            </li>
+                            <li class="contacts__item contacts__item--phone">
+                                <p class="contacts__title-text">Телефон:</p>
+                                <p class="contacts__text">
+                                    8 (3412) 47-39-38,<br>
+                                    8 (982) 115-17-69,<br>
+                                    8 (912) 769-10-90
+                                </p>
+                            </li>
+                            <li class="contacts__item contacts__item--email">
+                                <p class="contacts__title-text">Email:</p>
+                                <p class="contacts__text">transportmk@bk.ru</p>
+                            </li>
+                            <li class="contacts__item contacts__item--fax">
+                                <p class="contacts__title-text">Факс:</p>
+                                <p class="contacts__text">8 (3412) 245-145</p>
+                            </li>
+                        </ul>
+
+                        <div class="request-cost__get-request">
+                            <a href="#price" class="btn btn--get-price js-hash-section js-hash-elem js-anchor-link" data-hash="#price">Рассчитать стоимость</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="page-section">
+        <h2 class="visuallyhidden">Мы заботимся о вас!</h2>
+        <div class="container container--no-paddings">
+            <div class="panel-module">
+                <div class="panel-module__inner-container inner-container">
+                    <p class="panel-module__description panel-module__description--full-width panel-module__description--l-size">
+                        Перестаньте попусту тратить свое время – мы уже обо всем позаботились!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+
+<script src="js/vendor.min.js"></script>
+
+<script src="js/script.min.js"></script>
+</html>
